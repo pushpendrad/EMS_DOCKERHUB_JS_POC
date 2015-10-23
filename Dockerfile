@@ -6,6 +6,8 @@ RUN ln -s /usr/local/bin/gulp /usr/bin/gulp
 #adding all the source code to /data/artifact
 RUN mkdir -p "/data/artifact"
 WORKDIR /data/artifact/
+RUN apt-get update 
+
 RUN apt-get install -y npm
 RUN npm install -g nightwatch-html-reporter
 
